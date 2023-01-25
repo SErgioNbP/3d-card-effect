@@ -10,6 +10,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  perspective: 1000px;
 }
 
 .container {
@@ -20,10 +21,11 @@ body {
 }
 
 .card {
+  transform-style: preserve-3d;
   min-height: 80vh;
-  width: 28rem;
+  width: 27rem;
   border-radius: 30px;
-  padding: 3rem 4rem;
+  padding: 2rem 3rem;
   box-shadow: 0 20px 20px rgba(0, 0, 0, 0.2), 0 0 50px rgba(0, 0, 0, 0.2);
 }
 
@@ -35,13 +37,14 @@ body {
 }
 
 .sneaker img {
-  width: 20rem;
+  width: 18rem;
   z-index: 2;
+  transition: all 0.75s ease-out;
 }
 
 .circle {
-  width: 15rem;
-  height: 15rem;
+  width: 12rem;
+  height: 12rem;
   background: linear-gradient(to right,
       rgba(221, 97, 72, 0.75),
       rgba(175, 226, 207, 0.75));
@@ -50,12 +53,9 @@ body {
   z-index: 1;
 }
 
-.info {
-  padding: 1rem 0rem;
-}
-
 .info h1 {
-  font-size: 3rem;
+  font-size: 2.5rem;
+  transition: all 0.75s ease-out;
 }
 
 .info h3 {
@@ -63,12 +63,14 @@ body {
   padding: 1rem 0rem;
   color: #585858;
   font-weight: lighter;
+  transition: all 0.75s ease-out;
 }
 
 .sizes {
   margin-top: 30px;
   display: flex;
   justify-content: space-between;
+  transition: all 0.75s ease-out;
 }
 
 .sizes button {
@@ -100,4 +102,5 @@ button.active {
   cursor: pointer;
   border-radius: 30px;
   font-weight: bolder;
+  transition: all 0.75s ease-out;
 }
